@@ -18,6 +18,11 @@ app.post('/api/v1/profile/avatar', uploader.single('image'), async (req, res) =>
       fileName: req.file.originalname,
     })
 
+    // TODO: Do whatever you want with file
+    //       The author suggest that you save
+    //       the thumbnail, url, and fileId,
+    //       to the database.
+
     res.status(200).json({
       status: "OK",
       data: uploadedFile,
